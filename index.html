@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+      .inner:hover{
+        background-color: aqua;
+      }
+    </style>
+  <script src="https://kit.fontawesome.com/89e93f4171.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="container">
+  <header>
+    <div class="headElement">
+
+    </div>
+    <nav class="navbar bg-light mt-5">
+      <div class="container-fluid">
+        <p class="fs-2 fw-bold">Interactive<span class="fs-4 text-secondary"> Geometry Genius</span></p>
+        <button class="btn btn-primary col-1">Blog</button>
+
+      </div>
+    </nav>
+    <main>
+      <section class="mt-5">
+
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+          <div class="col ">
+            <div class="card h-100 p-4 text-center inner">
+              <img src="./images/triangle.png" class="card-img-top w-75 mx-auto" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title" id="math-type">Triangle</h5>
+                <p class="card-text">Area(A)=0.5 X b X h</p>
+                <input class="w-25" type="text" placeholder="b" id="input-triangle-one"> cm <input class="w-25" type="text" placeholder="h" id="input-triangle-two"> cm
+
+                <button class="btn btn-primary w-100 mt-4" id="triangle-btn">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 p-4 text-center inner">
+              <img src="./images/rectangle.png" class="card-img-top w-100 mx-auto" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title" id="math-type-rec">Rectangle</h5>
+                <p class="card-text">Area(A)=w x I</p>
+                <input class="w-25" type="text" placeholder="w" id="input-rectangle-one"> cm <input id="input-rectangle-two" class="w-25" type="text" placeholder="I"> cm
+
+                <button class="btn btn-primary w-100 mt-4" id="rectangle-btn">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 p-4 text-center inner">
+              <img src="./images/parallelogram.png" class="card-img-top mt-3 mx-auto" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title" id="math-type-parallel">Parallel</h5>
+                <p class="card-text">Area(A)=b X h</p>
+                <input class="w-25" type="text" placeholder="b" id="input-parallel-one"> cm <input id="input-parallel-two" class="w-25" type="text" placeholder="h"> cm
+                <button class="btn btn-primary w-100 mt-4" id="parallel-btn">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="text-center mb-4">
+              <h6><u>Area Collection</u></h6>
+              <table class="table table-dark table-striped">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>area</th>
+                    <th>Button</th>
+                  </tr>
+                  <tbody id="table-container">
+                 
+                  </tbody>
+                </thead>
+              </table>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-4 mt-2 g-4">
+          <div class="col">
+            <div class="card h-100 p-4 text-center inner"> 
+              <img src="./images/rhombus.png" class="card-img-top w-75 mx-auto mb-5" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title" id="math-type-rhombus">Rhombus</h5>
+                <p class="card-text">Area(A)=0.5 X d1 X d2</p>
+                <input class="w-25" type="text" placeholder="d1" id="input-rhombus-one"> cm <input class="w-25" type="text" placeholder="d2" id="input-rhombus-two"> cm
+                <button class="btn btn-primary w-100 mt-4" id="rhombus-btn">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 p-4 text-center inner">
+              <img src="./images/pentagon.png" class="card-img-top w-75 mb-1 mx-auto" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title" id="math-type-pentagon">Pentagon</h5>
+                <p class="card-text">Area(A)=0.5 x p x b</p>
+                <input class="w-25" type="text" placeholder="p" id="input-pentagon-one"> cm <input class="w-25" type="text" placeholder="b" id="input-pentagon-two"> cm
+
+                <button class="btn btn-primary w-100 mt-4" id="pentagon-btn">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 p-4 text-center inner">
+              <img src="./images/ellipse.png" class="card-img-top w-75 mt-3 mx-auto mb-5" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title mt-2" id="math-type-parallelo">Parallelogram</h5>
+                <p class="card-text">Area(A)=&pi;ab<i class="fa-sharp fa-solid fa-pen-field"></i></p>
+                <input class="w-25" type="text" placeholder="a" id="input-parallelo-one"> cm <input class="w-25" type="text" placeholder="b" id="input-parallelo-two"> cm
+
+                <button class="btn btn-primary w-100 mt-4" id="parallelo-btn">Calculate</button>
+              </div>
+            </div>
+          </div>
+      </section>
+    </main>
+  </header>
+  
+ 
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
